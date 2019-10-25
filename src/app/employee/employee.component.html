@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birthday</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let employee of employees">
+            <td style="width: 100px">{{employee.id | uppercase}}</td>
+            <td style="width: 100px">{{employee.name | employeeName: employee.gender }}</td>
+            <td style="width: 100px">{{employee.gender}}</td>
+            <td style="min-width: 100px">{{employee.birthDate | date}}</td>
+        </tr>
+    </tbody>
+</table>
